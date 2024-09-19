@@ -120,6 +120,14 @@ export default function Layout() {
                 <ListItemText>게시글 목록</ListItemText>
               </ListItemButton>
             </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton href='/post/create'>
+                <ListItemIcon>
+                  <VillaIcon />
+                </ListItemIcon>
+                <ListItemText>게시글 작성</ListItemText>
+              </ListItemButton>
+            </ListItem>
           </List>
           <Divider />
         </Stack>

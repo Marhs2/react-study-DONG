@@ -1,6 +1,22 @@
 {
   "posts": [
-    { "id": "1", "title": "a title", "author": "Gim" },
-    { "id": "2", "title": "another title", "author": "Gim" }
+    {
+      "id": "a791",
+      "title": "asd",
+      "content": "asd",
+      "author": "asd"
+    },
+    {
+      "id": "05e1",
+      "title": "asd",
+      "content": "asd",
+      "author": "asd"
+    },
+    {
+      "id": "ae6d",
+      "title": "그날 나는",
+      "content": "그날 나는 모든 것을 잃어버렸어 왜냐....... 나는 더 이상..........",
+      "author": "윤인석"
+    }
   ]
 }

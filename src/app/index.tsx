@@ -4,6 +4,7 @@ import Layout from './layout';
 import PostListPage from './post/list/page';
 import Proivder from './provider';
 import PostCreatePage from './post/create/page';
+import PostDetailPage from './post/list/[id]/pasge';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
             <Route path='/' element={<IndexPage />} />
             <Route path='/post' element={<Navigate to='/post/list' />} />
             <Route path='/post/list' element={<PostListPage />} />
+            <Route path='/post/list/:id' element={<PostDetailPage />} />
             <Route path='/post/create' element={<PostCreatePage />} />
           </Route>
         </Routes>

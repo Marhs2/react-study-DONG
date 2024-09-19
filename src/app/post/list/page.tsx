@@ -1,6 +1,7 @@
 import {
   Breadcrumbs,
   Divider,
+  Link,
   Stack,
   Table,
   TableBody,
@@ -23,7 +24,7 @@ function PostRow({ no, title, createdBy }: PostRowProps) {
   return (
     <TableRow>
       <TableCell>{no}</TableCell>
-      <TableCell>{title}</TableCell>
+      <TableCell><Link href={`/post/list/${no}`}>{no}</Link></TableCell>
       <TableCell>{createdBy}</TableCell>
     </TableRow>
   );
@@ -38,7 +39,8 @@ interface PostData {
 export default function PostListPage() {
   const {data ,isPending,isError} = useQuery<PostData[]>({
     queryKey: ['post-list'],
-    queryFn: () => axios.get('http://localhost:3001').then((res) => res.data),
+    queryFn: () => axios.get('http://localhost:3001/posts')
+    .then((res) => res.data),
   });
 
   return (
@@ -71,10 +73,6 @@ export default function PostListPage() {
                   createdBy={item.author}
                 />
               ))}
-            <PostRow no={1} title='게시글 제목1' createdBy='안녕1' />
-            <PostRow no={2} title='게시글 제목2' createdBy='안녕2' />
-            <PostRow no={3} title='게시글 제목3' createdBy='안녕3' />
-            <PostRow no={4} title='게시글 제목4' createdBy='안녕4' />
           </TableBody>
         </Table>
       </TableContainer>
